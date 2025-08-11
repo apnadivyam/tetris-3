@@ -1,0 +1,15 @@
+.cell {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+}
+
+.empty {
+  background-color: white;
+  opacity: 20%;
+}
+
+.full {
+  background-color: greenyellow;
+  opacity: 90%;
+}

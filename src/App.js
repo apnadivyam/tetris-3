@@ -1,13 +1,22 @@
 // import logo from './logo.svg';
+import { useState } from "react";
 import "./App.css";
 import Game from "./components/Game";
 
 function App() {
-	return (
-		<div className="App">
-			<Game rows={20} columns={10} />
-		</div>
-	);
+  const [gameOver, setGameOver] = useState(false);
+  return (
+    <div className="App">
+      {gameOver ? (
+        <div>
+          <h1>!!! Game Over !!!</h1>
+        </div>
+      ) : (
+        <Game rows={10} columns={12} gameOver={() => setGameOver(true)} />
+      )}
+      hii
+    </div>
+  );
 }
 
 export default App;
